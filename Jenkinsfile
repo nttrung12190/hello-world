@@ -15,10 +15,9 @@ pipeline {
 			label 'master'
 		  }
 		  steps {
-				
+			echo "test"	
 		  }
 		} 
-		
       }
     }
   }
