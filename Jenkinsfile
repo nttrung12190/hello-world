@@ -10,12 +10,15 @@ pipeline {
           }
         }
 
-        stage('Staging1b') 
-		node {
-        	checkout scm
-			sh 'echo "checkout scm successfully"'
-          }
-        }
+        stage('Staging1b') {
+		  agent {
+			label 'master'
+		  }
+		  steps {
+				
+		  }
+		} 
+		
       }
     }
 }
