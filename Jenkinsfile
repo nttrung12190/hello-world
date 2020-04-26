@@ -10,12 +10,12 @@ pipeline {
           }
         }
 
-        stage('Staging1b') {
-          steps {
-            echo 'Hahahoho'
+        stage('Staging1b') 
+		node {
+        	checkout scm
+			sh 'echo "checkout scm successfully"'
           }
         }
-
       }
     }
 
